@@ -1,0 +1,31 @@
+Friend,Friendships
+AB,BC
+BC,"AB, CD"
+CD,"BC, EF, GH"
+EF,CD
+GH,"CD, IJ"
+IJ,"GH, KL, MN"
+KL,IJ
+MN,"IJ, OP"
+OP,"MN, QR"
+QR,"OP, ST, UV"
+ST,QR
+UV,"QR, WX"
+WX,"UV, YZ"
+YZ,"WX, ZA"
+ZA,"YZ, AB"
+DE,"FG, HI"
+FG,DE
+HI,"DE, JK"
+JK,"HI, LM"
+LM,JK
+NO,PQ
+PQ,"NO, RS"
+RS,"PQ, TU, VW"
+TU,RS
+VW,"RS, XY"
+XY,"VW, AC"
+AC,XY
+BD,CE
+CE,"BD, DF"
+DF,CE
