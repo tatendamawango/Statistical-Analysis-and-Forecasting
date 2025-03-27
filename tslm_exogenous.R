@@ -32,8 +32,3 @@ fccomp <- forecast(fitcomp, h=36)
 plot(fccomp)
 
 fcmix <- forecast(fitmix, h=36)  # ERROR! Why?
-
-
-#
-#  Notice: functions arima(), auto.arima() has xreg parameter to pass exogenous regressors.
-#
