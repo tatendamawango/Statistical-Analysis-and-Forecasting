@@ -1,7 +1,6 @@
 # Load package 'fpp'
 library("fpp")
 
-
 ausbeer
 plot(ausbeer)
 
@@ -49,18 +48,9 @@ beerfit1$mean
 accuracy(beerfit1)      
 accuracy(beerfit1, ausbeer)
 accuracy(beerfit1, window(ausbeer, start=2005)) 
-# i.e. accuracy() function selects same time values for accuracy estimation
-
-# Exercise: calculate RMSE for every forecast and select most accurate method
 
 # RMSE calculation manually 
 sqrt(mean(residuals(beerfit1)^2))
-
-# Exercise: 
-# Variable dj (of library fpp) contains values of Dow-Jones index. 
-# 1) Try simple forecasting methods for this time series
-# 2) Estimate quality using holdout sample and select the most precise method
-
 
 #
 # Time-series cross-validation using tsCV()
