@@ -1,9 +1,5 @@
 library(fpp)
 
-##
-## Example 1. If time series is stationary
-##
-
 myts <- insurance[,"Quotes"]
 plot(myts)
 
@@ -45,13 +41,6 @@ summary(fitauto)
 tsdisplay(residuals(fitauto))
 Box.test(residuals(fitauto), type="Ljung-Box", lag=10, fitdf=2) # fitdf=p+q
 
-##
-## Example 2. Time series has trend
-## ARMA model will be used for residuals of some trend removal method
-##
-## Non-seasonal time series for Australia international visitors
-##
-
 ? austa
 plot(austa)
 
@@ -59,9 +48,6 @@ plot(austa)
 # Let's try to remove linear trend
 fitlm <- tslm(austa~trend)
 summary(fitlm)
-
-
-# We will analyse residuals as time series (variable tr)
 
 # Plot residuals
 tr <- residuals(fitlm)
@@ -97,22 +83,3 @@ lines(forecast(fitarma, h=20)$mean, col="red")
 plot(austa, xlim=c(1995, 2020), ylim=c(3, 8))
 lines(forecast(fitlm, h=10)$mean, col="red")
 lines(forecast(fitlm, h=10)$mean + forecast(fitarma, h=10)$mean, col="blue")
-
-#
-# Using of ARMA models for forecasting requires to make 
-# time series stationary, i.e., to remove trend and seasonality.
-# Workflow of forecasting:
-#  * detect if trend and seasonality exist
-#  * remove trend and seasonality (if it exist)
-#  * use ARMA model for the remaining part of time series
-#  * test if residuals of ARMA model are white noise
-#  * do ARMA forecasting
-#  * add ARMA forecast to the forecast of trend and seasonality (if used)
-#    to obtain a forecast of original time series
-#
-# TASK 1: try to fit ARMA model for ts(usconsumption[, "consumption"])
-#
-# TASK 2: try to fit ARMA model for ts(usconsumption[, "income"])
-#
-# TASK 3: try to fit ARMA model for residuals of ETS model for usmelec
-#
