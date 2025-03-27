@@ -21,6 +21,3 @@ summary(fitlagged)
 
 fitlagged <- tslm(insurance[,1]~advLag0 + advLag1 + advLag2 + advLag3)
 summary(fitlagged)
-
-# Note: dynlm package supports a more friendly syntax for dynamic regression
-
