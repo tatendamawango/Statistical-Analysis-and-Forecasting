@@ -1,7 +1,3 @@
-#
-# EXAMPLE. Regression model for time series containing structural change
-#
-
 plot(ausbeer)
 fit2 <- tslm(ausbeer~trend+season)
 summary(fit2)
